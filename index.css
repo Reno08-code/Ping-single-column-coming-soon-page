@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+body{font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding:2rem 0;
+}
+ ul{
+    list-style-type: none;
+ }
+
+ .heading h1{
+     font-weight: 300;
+     padding: 3rem 0 1rem;
+     color: var(--Gray)
+ }
+
+span{
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+ }
+
+ .heading p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--Very-Dark-Blue);
+    padding-bottom: 1.5rem;
+ }
+
+ .heading .form{
+    width: 22rem;
+    margin: auto;
+ }
+
+ .heading .form input{
+    width: 100%;
+    padding:0.8rem 0 0.8rem 1.8rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--Pale-Blue);
+    outline: none;
+    margin-bottom: 0.6rem;
+ }
+
+ .heading .form input::placeholder{
+    color: var(--Pale-Blue);
+ }
+
+ .heading .form button{
+    width:100%;
+    background-color: var(--Blue);
+    color: white;
+    border: 1px solid var(--Blue);
+    border-radius:2rem ;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+ }
+
+ .heading .form button:hover{
+  background-color: transparent;
+  color: var(--Blue);
+ }
+
+ form .error input[type="email"]{
+    border-color: var(--Light-Red);
+    margin-bottom: 2rem;
+ }
+
+ form .error_text {
+	position: absolute;
+	top: 73.5rem;
+	font-size: .95rem;
+	margin-top: 0.8rem;
+	color: hsl(354, 100%, 66%);
+	font-weight: 500;
+	font-style: italic;
+}
+
+ .main-image{
+    padding: 4rem 2.5rem 5rem;
+ }
+
+ .footer ul{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.footer ul li{
+    margin: 0 1.5rem;
+}
+
+.footer ul li a {
+    color: var(--Blue);
+    transition: background-color 0.5s;
+}
+.footer ul li a:hover{
+background-color: var(--Blue);
+color: white;
+border-radius: 50%;
+}
+
+.attribution-content{
+    margin: 2rem auto;
+}
+      .attribution {
+        font-size: 15px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .attribution-content .copy{
+        color:var(--Gray);
+        font-size: 1rem;
+      }
+      
+
+    @media (min-width:700px) {
+        .heading h1{
+            font-size: 2.5rem;
+        
+        }
+        .heading .form{
+            width:auto
+        }
+        .heading .form input, .heading .form button{
+            width: auto;
+            padding:1rem 2rem;
+        }
+        .heading .form button{
+            width:12rem;
+        }
+        .heading .form input{
+            width:18rem ;
+        }
+        .main-image img{
+            width:35rem;
+        }
+    }
+      
+    
