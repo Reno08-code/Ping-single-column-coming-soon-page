@@ -75,7 +75,7 @@ span{
     border-radius:2rem ;
     padding: 0.8rem;
     cursor: pointer;
-    transition: background-color 0.5s;
+    transition: background-color 0.8s;
  }
 
  .heading .form button:hover{
@@ -83,19 +83,22 @@ span{
   color: var(--Blue);
  }
 
- form .error input[type="email"]{
+ form input .error  {
     border-color: var(--Light-Red);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
  }
 
  form .error_text {
-	position: absolute;
-	top: 73.5rem;
+	
+	top: 1rem;
 	font-size: .95rem;
 	margin-top: 0.8rem;
 	color: hsl(354, 100%, 66%);
 	font-weight: 500;
 	font-style: italic;
+}
+.error_text{
+    display: none;
 }
 
  .main-image{
@@ -161,5 +164,5 @@ border-radius: 50%;
             width:35rem;
         }
     }
-      
+   
     
