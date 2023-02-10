@@ -7,15 +7,18 @@ const button = form.querySelector('[type="submit"]');
 const error = document.createElement('p');
 error.classList.add('error_text');
 error.textContent = msg;
+error.style.display = "none";
 
 function checkEmail (e) {
 	e.preventDefault();
-	const email = e.target.querySelector('[type="email"]').value;
+	const email = e.target.querySelector('[type="text"]').value;
 	if (!validateEmail(email)) {
 		form.classList.add("error");
+		error.style.display = "block";
 		form.insertBefore(error, button);
 	} else {
-		form.removeChild(error);
+		error.style.display = "none";
+		
 		form.classList.remove("error");
 	}
 }
@@ -27,6 +30,7 @@ function validateEmail(email) {
   
 
 }
+form.addEventListener("submit", checkEmail);
 
 /*explaination for the above code block:return re.test(String(email).toLowerCase());
 
@@ -40,4 +44,4 @@ Then, the test method of the re regex object is called with the lowercased email
 3.re.test(...): This method tests whether a string matches the pattern defined by a regular expression (regex). It returns true if the string matches the pattern and false otherwise. For example, if re is the regex /hello/ and email is the string "hello world", re.test(email) would return true.
 
 */
-form.addEventListener("submit", checkEmail);
+
